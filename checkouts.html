@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout & Payment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="checkout-page-wrapper">
+        <div class="checkout-content-container">
+            <section class="final-order-summary-section" id="final-order-summary">
+                <h2 class="section-heading">Order Summary</h2>
+                <div class="final-summary-item">
+                    <img id="final-product-image" src="assets/images/product-main.png" alt="Product Image" class="final-summary-image">
+                    <div class="final-summary-info">
+                        <p id="final-product-name" class="final-product-title">Fall Limited Edition Sneakers</p>
+                        <p>Quantity: <span id="final-product-quantity">1</span></p>
+                    </div>
+                    <p id="final-product-price" class="final-summary-price">৳125.00</p>
+                </div>
+                <div class="summary-total-details">
+                    <p>Total Price: <span id="total-price-display">৳125.00</span></p>
+                    <p class="advance-payment-info">10% Advance for C.O.D: <span id="advance-amount-display">৳12.50</span></p>
+                </div>
+            </section>
+
+            <section class="customer-billing-section">
+                <h2 class="section-heading">Billing & Payment</h2>
+                <form id="customer-billing-form" class="billing-form-grid">
+                    <div class="form-field-group full-width">
+                        <label for="customer-country">Country</label>
+                        <select id="customer-country" name="country" required>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="United States">United States</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Canada">Canada</option>
+                        </select>
+                    </div>
+                    <div class="form-field-group full-width">
+                        <label for="customer-name">Name</label>
+                        <input type="text" id="customer-name" name="name" required>
+                    </div>
+                    <div class="form-field-group full-width">
+                        <label for="customer-address">Address</label>
+                        <input type="text" id="customer-address" name="address" required>
+                    </div>
+                    <div class="form-field-group">
+                        <label for="customer-postcode">Postcode</label>
+                        <input type="text" id="customer-postcode" name="postcode" required>
+                    </div>
+                    <div class="form-field-group">
+                        <label for="customer-city">City</label>
+                        <input type="text" id="customer-city" name="city" required>
+                    </div>
+                     <div class="form-field-group full-width">
+                        <label for="customer-region">Region / State</label>
+                        <input type="text" id="customer-region" name="region" required>
+                    </div>
+                    <div class="form-field-group">
+                        <label for="customer-phone">Phone</label>
+                        <input type="tel" id="customer-phone" name="phone" required>
+                    </div>
+                    <div class="form-field-group">
+                        <label for="customer-email">Email</label>
+                        <input type="email" id="customer-email" name="email" required>
+                    </div>
+                     <div class="form-field-group full-width">
+                        <label for="customer-message">Message (Optional)</label>
+                        <textarea id="customer-message" name="message" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-field-group full-width">
+                        <label for="payment-method">Payment Method</label>
+                        <select id="payment-method" name="paymentMethod" required>
+                            <option value="" disabled selected>Select a payment method</option>
+                            <option value="bKash">bKash</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="PayPal">PayPal</option>
+                            <option value="CashOnDelivery">Cash on Delivery</option>
+                            <option value="WhatsApp">WhatsApp Live Order</option>
+                        </select>
+                    </div>
+
+                    <div id="payment-instructions-container" class="full-width">
+                        <div id="bKash-instructions" class="payment-method-details" style="display: none;">
+                             <h3>bKash Payment</h3>
+                            <p>Please send the total amount to the bKash merchant number below and enter the Transaction ID (TrxID).</p>
+                            <p><strong>Merchant Number:</strong> 01XXXXXXXXX</p>
+                            <div class="form-field-group full-width">
+                                <label for="bkash-trxid">Transaction ID (TrxID)</label>
+                                <input type="text" id="bkash-trxid" name="bkashTrxId">
+                            </div>
+                        </div>
+
+                        <div id="Nagad-instructions" class="payment-method-details" style="display: none;">
+                            <h3>Nagad Payment</h3>
+                            <p>Please send the total amount to the Nagad merchant number below and enter the Transaction ID (TrxID).</p>
+                            <p><strong>Merchant Number:</strong> 01XXXXXXXXX</p>
+                             <div class="form-field-group full-width">
+                                <label for="nagad-trxid">Transaction ID (TrxID)</label>
+                                <input type="text" id="nagad-trxid" name="nagadTrxId">
+                            </div>
+                        </div>
+
+                        <div id="PayPal-instructions" class="payment-method-details" style="display: none;">
+                            <h3>PayPal Payment</h3>
+                            <p>You will be redirected to PayPal for secure payment. The "Place Order" button will initiate the process.</p>
+                            <p><strong>PayPal Email:</strong> payment@example.com</p>
+                        </div>
+
+                        <div id="CashOnDelivery-instructions" class="payment-method-details" style="display: none;">
+                           <h3>Cash on Delivery</h3>
+                            <p>For Cash on Delivery, you need to pay <strong>10% in advance</strong>. Please send the advance amount (<span class="advance-amount-text">৳12.50</span>) to our bKash/Nagad number and provide the transaction details.</p>
+                            <p><strong>bKash/Nagad Number:</strong> 01XXXXXXXXX</p>
+                            <div class="form-field-group full-width">
+                                <label for="cod-trxid">Transaction ID (TrxID) for Advance</label>
+                                <input type="text" id="cod-trxid" name="codTrxId">
+                            </div>
+                        </div>
+                        
+                        <div id="WhatsApp-instructions" class="payment-method-details" style="display: none;">
+                           <h3>Order on WhatsApp</h3>
+                           <p>Click the button below to confirm your order details with our representative directly on WhatsApp.</p>
+                           <button type="button" id="whatsapp-order-btn" class="primary-action-button whatsapp-order-button">
+                               Order on WhatsApp
+                           </button>
+                        </div>
+                    </div>
+
+                    <div class="form-field-group full-width">
+                        <button type="submit" id="place-final-order-btn" class="primary-action-button">Place Order</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://unpkg.com/jspdf-autotable"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

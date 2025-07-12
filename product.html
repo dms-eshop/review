@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall Limited Edition Sneakers</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="product-page-wrapper">
+        <section class="product-display-container">
+            <div class="product-gallery-block">
+                <div class="product-main-image-holder">
+                    <img src="assets/images/product-main.png" id="main-product-showcase" alt="Fall Limited Edition Sneakers">
+                </div>
+                <div class="product-thumbnail-grid">
+                    <img src="assets/images/thumb-1.png" class="thumbnail-item active-thumb" alt="Sneaker Thumbnail 1" onclick="updateMainImage(this)">
+                    <img src="assets/images/thumb-2.png" class="thumbnail-item" alt="Sneaker Thumbnail 2" onclick="updateMainImage(this)">
+                    <img src="assets/images/thumb-3.png" class="thumbnail-item" alt="Sneaker Thumbnail 3" onclick="updateMainImage(this)">
+                    <img src="assets/images/thumb-4.png" class="thumbnail-item" alt="Sneaker Thumbnail 4" onclick="updateMainImage(this)">
+                </div>
+            </div>
+
+            <div class="product-info-block">
+                <p class="product-brand">SNEAKER COMPANY</p>
+                <h1 class="product-main-title">Fall Limited Edition Sneakers</h1>
+                <p class="product-description">
+                    These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+                </p>
+                <div class="product-price-section">
+                    <div class="price-and-discount">
+                        <span class="current-price">৳125.00</span>
+                        <span class="discount-badge">50%</span>
+                    </div>
+                    <p class="original-price">৳250.00</p>
+                </div>
+                <div class="product-action-controls">
+                    <div class="quantity-control-wrapper">
+                        <button id="btn-quantity-minus" class="quantity-adjust-btn">-</button>
+                        <span id="product-quantity-value">1</span>
+                        <button id="btn-quantity-plus" class="quantity-adjust-btn">+</button>
+                    </div>
+                    <button id="confirm-order-action-btn" class="primary-action-button">
+                        <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.97-10.86h14.704l-1.555 6.221Z" fill="#FFF" fill-rule="nonzero"/></svg>
+                        Confirm Order
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/product.js"></script>
+</body>
+</html>
